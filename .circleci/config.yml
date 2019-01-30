@@ -21,7 +21,6 @@ orbs:
           name: rebar3/erlang
           version: <<parameters.version>>
         steps:
-          - run: <<parameters.pkg_install_cmd>> build-essential
           - rebar3/install_ca_certs:
               pkg_install_cmd: <<parameters.pkg_install_cmd>>
           - checkout
