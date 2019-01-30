@@ -8,6 +8,7 @@ jobs:
     docker:
       - image: erlang:21.2-alpine
     steps:
+      - run: <<parameters.pkg_install_cmd>> automake
       - rebar3/install_ca_certs
       - checkout
       - rebar3/with_deps_cache:
