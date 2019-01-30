@@ -13,7 +13,7 @@ orbs:
             type: string
           pkg_install_cmd:
             type: string
-            default: apk add --no-cache
+            default: apk add alpine-sdk && apk add --no-cache
           codecov_flag:
             description: String the coverage reports are grouped by
             type: string
