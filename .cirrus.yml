@@ -1,0 +1,9 @@
+test_task:
+  container:
+    image: erlang:latest
+  rebar3_cache:
+    folder: _build
+    fingerprint_script: cat rebar.lock
+    populate_script: rebar3 compile --deps_only
+  compile_script: rebar3 compile
+  test_script: rebar3 test
